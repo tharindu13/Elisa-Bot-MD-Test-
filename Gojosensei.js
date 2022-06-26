@@ -159,9 +159,7 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
     	const isPremium = isCreator || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
 	    
         //member\\
-        let picaks = [flaming,fluming,flarun,flasmurf]
-		let picak = picaks[Math.floor(Math.random() * picaks.length)]
-		
+    	
           try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
             let limitUser = isPremium ? global.limitawal.premium : global.limitawal.free
