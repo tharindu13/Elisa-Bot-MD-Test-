@@ -2202,7 +2202,7 @@ case 'antilink':
                 if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
                 anu = await fetchJson(`https://ravindumanoj-sew-api.herokuapp.com/main/download/ytmp3?url=${text}&apikey=RavinduManoj`)
                 tummb = await getBuffer('https://telegra.ph/file/9789a09c964cee5597a05.jpg')   
-                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.mp3 }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.mp3 }, mimetype: 'audio/mpeg', fileName: `${anu.title}.mp3` }, { quoted: m })
                             
             }
             break
