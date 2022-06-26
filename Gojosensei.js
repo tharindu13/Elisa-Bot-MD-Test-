@@ -2196,6 +2196,16 @@ case 'antilink':
                                   GojoMdNx.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
                               }
                               break
+		case 'audytmp3': case 'audytsytmp3': {
+	            ////if (isLimit(m.sender, isPremium, isCreator, limitCount, limit)) return m.reply(mess.endLimit)
+                if (!text) throw '*Enter a Link Query!*'
+                if (!isUrl(args[0]) && !args[0].includes('youtu')) throw '*The link you provided is not valid*'
+                anu = await fetchJson(`https://ravindumanoj-sew-api.herokuapp.com/main/download/ytmp3?url=${text}&apikey=RavinduManoj`)
+                tummb = await getBuffer('https://telegra.ph/file/9789a09c964cee5597a05.jpg')   
+                GojoMdNx.sendMessage(m.chat, { audio: { url: anu.mp3 }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                            
+            }
+            break
                               case 'ytmp4': case 'ytvideo': {
                               
                                   let { ytv } = require('./lib/y2mate')
