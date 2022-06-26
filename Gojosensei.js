@@ -655,7 +655,13 @@ if (q.includes('--help')) return reply(examkosong)
   addEmas(m.sended, emasnya)
   addEmerald(m.sender, emeraldnya)	     
   }   
-  break  
+  break 
+case 'glasses' : {
+            nima = await fetchJson(`https://sanuw-api.herokuapp.com/docs/ephoto/glasses?text=${text}&apikey=sanuwa`)
+            GojoMdNx.sendMessage(m.chat, { image: { url: nima.url }, caption: ' test '})
+            
+            }
+            break
   //transaction\\
  case 'getyt': case 'ytlist' : case 'ytl' : {
                                   
