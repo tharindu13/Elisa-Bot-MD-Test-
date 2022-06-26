@@ -657,7 +657,7 @@ if (q.includes('--help')) return reply(examkosong)
   }   
   break 
 case 'glasses' : {
-            nima = await fetchJson(`https://sanuw-api.herokuapp.com/docs/ephoto/glasses?text=${text}&apikey=sanuwa`)
+            nima = await axios.get (`https://sanuw-api.herokuapp.com/docs/ephoto/glasses?text=${text}&apikey=sanuwa`)
             GojoMdNx.sendMessage(m.chat, { image: { url: nima.url }, caption: ' test '})
             
             }
