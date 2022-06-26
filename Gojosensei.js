@@ -19,7 +19,7 @@ const { yt720 ,  yt480 ,  yt360 } = require('../lib/ytmp4');
 const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const nexusnw = require('xfarr-api')
 
-//rpg function\\
+//rpg functuion\\
    const { 
      addInventoriDarah, 
       cekDuluJoinAdaApaKagaDiJson, 
