@@ -198,14 +198,14 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
         }
 	
 	//group target \\
-const reply = (teks) => {
-            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/gojo.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
-        }
-        
-        const replay = (teks) => {
-            GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botname}`,"body": ` Gojo-Satoru`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./GojoMedia/gojo.jpg`),"sourceUrl": "https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg"}}}, { quoted: m})
-        }
-	
+
+	const reply = (teks) => {
+                              GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botnma}`,"body": `ᴏᴡɴᴇʀ ʙᴏᴛ ʙᴏᴛ ɢʀᴏᴜᴘ 😉\n☃⛓️Ոɿɱค ૦ԲԲɿ८ɿคՆ ᶜᴿᴱᵂ 🕯️❖`, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./image/drips.jpg`),"sourceUrl": "https://chat.whatsapp.com/Fs5ZpTLA3u64JN5a6K3a44"}}}, { quoted: m})
+                          }
+                          
+                          const replay = (teks) => {
+                              GojoMdNx.sendMessage(m.chat, { text: teks, contextInfo:{"externalAdReply": {"title": ` ${global.botnma}`,"body": `ʙᴏᴛ ᴏᴡɴᴇʀ ʏᴏᴜᴛᴜʙᴇ ᴄʜᴀɴɴᴇᴛ sᴜʙsᴄʀɪʙᴇ ᴘʟᴇᴀsᴇ !♥️ `, "previewType": "PHOTO","thumbnailUrl": ``,"thumbnail": fs.readFileSync(`./image/drips.jpg`),"sourceUrl": "https://youtube.com/channel/UCjDKRYcwd5ZIpGICcVVL96Q"}}}, { quoted: m})
+                          }
         //Public & Self\\
         if (!GojoMdNx.public) {
             if (!m.key.fromMe) return
