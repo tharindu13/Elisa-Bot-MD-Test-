@@ -656,6 +656,13 @@ if (q.includes('--help')) return reply(examkosong)
   addEmerald(m.sender, emeraldnya)	     
   }   
   break  
+case 'setalive': {
+               if (!isCreator) return replay(`${mess.owner}`)
+               if (!text) return replay(`Example : ${prefix + command} packname|author`)
+          global.alive = text
+          reply('*✅ ALIVE MASSAGE HAS CHANGE*\n '+'```'+global.alive+ '```')
+            }
+            break
   //transaction\\
  case 'getyt': case 'ytlist' : case 'ytl' : {
                                   
