@@ -1653,26 +1653,27 @@ case 'antilink': {
                                   }
                                }
                                break
-                                         case 'mute': {
-                                  if (!m.isGroup) throw mess.group
-                                  if (!isAdmins) throw mess.admin
-                                  if (args[0] === "on") {
-                                  if (db.chats[m.chat].mute) return reply(`Already activated`)
-                                  db.chats[m.chat].mute = true
-                                  reply(`${GojoMdNx.user.name} has been muted in this group !`)
-                                  } else if (args[0] === "off") {
-                                  if (!db.chats[m.chat].mute) return reply(`Already deactivated`)
-                                  db.chats[m.chat].mute = false
-                                  reply(`${GojoMdNx.user.name} has been unmuted in this group!`)
-                                  } else {
-                                   let buttons = [
-                                          { buttonId: 'mute on', buttonText: { displayText: 'ON' }, type: 1 },
-                                          { buttonId: 'mute off', buttonText: { displayText: 'OFF' }, type: 1 }
-                                      ]
-                                      await GojoMdNx.sendButtonText(m.chat, buttons, `Mute Bot`, GojoMdNx.user.name, m)
-                                  }
-                               }
-                               break
+                                case 'mute': {
+                if (!m.isGroup) return replay(`${mess.group}`)
+                if (!isBotAdmins) return replay(`${mess.botAdmin}`)
+                if (!isAdmins) return replay(`${mess.admin}`)
+                if (args[0] === "on") {
+                if (db.data.chats[m.chat].mute) return reply(`Previously Active`)
+                db.data.chats[m.chat].mute = true
+                reply(`${GojoMdNx.user.name} Has Been Muted In This Group !`)
+                } else if (args[0] === "off") {
+                if (!db.data.chats[m.chat].mute) return reply(`Previously Inactive`)
+                db.data.chats[m.chat].mute = false
+                reply(`${GojoMdNx.user.name} Has Been Unmuted In This Group!`)
+                } else {
+                 let buttons = [
+                        { buttonId: 'mute on', buttonText: { displayText: 'BIXBY MUTE' }, type: 1 },
+                        { buttonId: 'mute off', buttonText: { displayText: 'BIXBY UNMUTE' }, type: 1 }
+                    ]
+                    await GojoMdNx.sendButtonText(m.chat, buttons, `Mute Bot`, GojoMdNx.user.name, m)
+                }
+             }
+             break
                               case 'linkgroup': case 'grouplink': case 'gclink': case 'linkgc': {
                                   if (!m.isGroup) throw mess.group
                                   let response = await GojoMdNx.groupInviteCode(m.chat)
