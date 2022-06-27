@@ -1667,8 +1667,8 @@ case 'antilink': {
                 reply(`${GojoMdNx.user.name} Has Been Unmuted In This Group!`)
                 } else {
                  let buttons = [
-                        { buttonId: 'mute on', buttonText: { displayText: 'BIXBY MUTE' }, type: 1 },
-                        { buttonId: 'mute off', buttonText: { displayText: 'BIXBY UNMUTE' }, type: 1 }
+                        { buttonId: 'mute on', buttonText: { displayText: 'MUTE' }, type: 1 },
+                        { buttonId: 'mute off', buttonText: { displayText: 'UNMUTE' }, type: 1 }
                     ]
                     await GojoMdNx.sendButtonText(m.chat, buttons, `Mute Bot`, GojoMdNx.user.name, m)
                 }
