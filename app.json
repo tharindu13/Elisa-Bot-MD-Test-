@@ -1,0 +1,67 @@
+{
+  "name": "Zim Bot Inc",
+  "description": "whatsapp md bot build with nodejs",
+  "repository": "https://github.com/MRnimaofc2/tuna-bot",
+  "logo": "https://i.imgur.com/rANDwCP.jpeg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
+  "env": { 
+        "pemilink_number": {
+            "description": "මොකක්ද දන්නෙ නැ උබේ නම්බර් එක දාපන්",
+            "required": true,
+            "value":"94715166112"
+        },
+        "primium_number": {
+            "description": "උබේ නම්බර් එක දාපන්",
+            "required": true,
+            "value":"94715166112"
+        },
+        "pengguna": {
+            "description": "උබේ නම දපන්",
+            "required": true,
+            "value":"MR NIMA"
+        },
+        "BOT_NAME": {
+            "description": "බොට් owner නම",
+            "required": true,
+            "value":"නම"
+        },
+       "STICKER_PACKAGE": {
+            "description": "ස්ටිකර් පැකේජ් name එක",
+            "required": true,
+            "value":"© Nima"
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        },
+        "session_Name": {
+            "description": "සෙසන් නේම් එක මේක් වෙනස් කරන්න ඔනි නෑ",
+            "required": true,
+            "value":"session"
+        },
+        "SP_IMOJI": {
+            "description": "කැමති ඉමෝජියක්",
+            "required": true,
+            "value":"📍"
+        }
+                
+   },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
