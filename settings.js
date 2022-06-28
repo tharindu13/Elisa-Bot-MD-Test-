@@ -9,7 +9,7 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //global api
-globa.fbapi = 'dd79-1aeb-21a3'
+global.fbapi = 'dd79-1aeb-21a3'
 global.APIs = {
 	zenz: 'https://zenzapi.xyz', 
 }
