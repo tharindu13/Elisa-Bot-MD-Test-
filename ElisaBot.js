@@ -2566,8 +2566,8 @@ case 'antilink': {
 
 
                               quickReplyButton: {
-                              displayText: 'ɢᴇᴛ ᴀᴜᴅɪᴏ',
-                              id: `auddlinkdown ${buf2}`
+                              displayText: '💃 I GOT IT 💃',
+                              id: 'Gott'
                               }
                               }]
                               }
