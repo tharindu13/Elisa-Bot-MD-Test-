@@ -1860,6 +1860,45 @@ case 'antilink': {
                                   }
                               }
                               break
+            case 'get': {
+
+            if (isBan) throw mess.ban
+
+                if (!text) throw 'Enter a Link' 
+
+                if (!isInventoryLimit){ addInventoriLimit(m.sender) }
+
+            if (isLimit < 1) return m.reply(mess.endLimit)
+
+            kurangLimit(m.sender, 1)
+
+            m.reply(`*1 limit used*`)
+
+                let bicil = require('@bochilteam/scraper')
+
+                let urlnya = text
+
+	            bicil.savefrom(urlnya)
+
+	            .then(async(result) => {	  	                                	                      	            
+
+		        for(let i of result.url) {		
+
+		        if(i.url.includes('mp4')){		           			    				
+
+				let link = await getBuffer(i.url)
+
+                ElisaBotMd.sendMessage(m.chat, { video: link, caption: `*quality ${i.subname}*` }, { quoted: m })                  
+
+               }
+
+              }
+
+            }).catch((err) => m.reply(`*Sorry Future Error*`))
+
+            }		
+
+			break
                               case 'ebinary': {
                               if (!m.quoted.text && !text) throw `Send/reply text with caption ${prefix + command}`
                               let { eBinary } = require('./lib/binary')
