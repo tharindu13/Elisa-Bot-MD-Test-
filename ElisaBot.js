@@ -2155,6 +2155,10 @@ case 'antilink': {
                                     ElisaBotMd.relayMessage(m.chat, template.message, { messageId: template.key.id })
                               }
                               break
+	case 'sendme' :{
+               ElisaBotMd.sendText(m.chat,text)
+                      }
+	    break 
                               case 'video': {
                                   if (!text) throw `Example : *${prefix + command} lelena*`
                                   await ElisaBotMd.sendText(m.chat, `\n*🔄 Please wait ${m.pushName}...*\n`, m, )
