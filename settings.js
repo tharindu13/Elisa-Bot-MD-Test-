@@ -69,8 +69,8 @@ global.limitawal = {
         potionawal: 1
      }    
 
-global.thumb = fs.readFileSync('./image/drips.jpg')
-global.imgalive = fs.readFileSync('./image/drips.jpg')
+global.thumb = fs.readFileSync('./image/Elisa.jpg')
+global.imgalive = fs.readFileSync('./image/Elisa.jpg')
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
 	fs.unwatchFile(file)
