@@ -18,23 +18,23 @@ global.APIKeys = {
 }
 
 //other
-global.owner = ['94715166712'] 
-global.pemilik = ['94715166712'] //pemilik nomor
-global.premium = ['94715166712'] //premium number
-global.pengguna = 'Nima' //pengguna
-global.botnma = '𝐋𝐨𝐥𝐢 𝐁𝐨𝐭' //botnama,botname
-global.ownernma = 'nima' //ownernama,ownername
-global.packname = '© ɴɪᴍᴀ ᴇᴅɪᴛɪᴏɴ' // packname
-global.author = 'ɴɪᴍᴀ ᴏғᴄ ɢʀᴏᴜᴘ ʙᴏᴛ' //authorname
+global.owner = ['94715166712'] // Owner number , (අයිතිකරුගේ නම්බර් එක )
+global.pemilik = ['94715166712'] //Change  it , ඔබට කැමති නම් වෙනස් කරන්න
+global.premium = ['94715166712'] //Change it ඔබට කැමතිනම් වෙනස් කරන්න 
+global.pengguna = 'Dark Maker' // Your name ඔබේ නම 
+global.botnma = '💃 𝐐𝐮𝐞𝐞𝐧 𝐄𝐥𝐢𝐬𝐚 𝐁𝐨𝐭 💃' // Your bot name , ඔබගෙ බොට්ගේ නම 
+global.ownernma = '𝓓𝓪𝓻𝓴 𝓜𝓪𝓴𝓮𝓻' //ownernama,ownername
+global.packname = 'Queen Elisa Sticker' // Sticker package name 
+global.author = 'Dark Maker' // Sticker Autor name 
 global.sessionName = 'session'
 global.prefa = ['#','!','/',''] 
 global.sp = '🔵'
-// Alive massage 
+// Alive massage , ඔබේ බොගේ alive massage  එක මෙහි ඇති ` ` මෙම ලකුනු ඇතුලේ ඔබට අවශ්‍ය ඔනිම දෙයක් Type කරන්න.💃
 global.alive =`Hello i am alive now
 
 Download song type .yt 
 Thanks fro using...`
-// Welcome massage  
+// Welcome massage  ඔබට කැමති නම් මෙයට ඔබෙ welcome massage  එක යොදන්න 
 global.welcome = `
 🌀 Thanks Fro using sl zim bot
 ✾ Some bugs fixing
@@ -48,12 +48,12 @@ global.sendgoodbye = `remove`
 global.mess = {
     success: '✅ Done!',
     admin: 'you must be admin to use this cmd!',
-    botAdmin: 'zim bot must be admin neh!',
-    owner: 'This cmd is for zim bot owner only',
+    botAdmin: 'Bot must be admin neh!',
+    owner: 'This cmd is for Elisa bot owner only',
     group: 'oooh sorry this cmd is for groups only!',
     private: 'goossssh it can only used in dms!',
     bot: 'This cmd  its only for the bot host',
-    wait: 'wait zim bot processing ',
+    wait: 'Wait Elisa bot processing ',
     endLimit: 'Your Daily Limit Has Expired, The Limit Will Be Reset Every 12 Hours',
 }
 global.limitawal = {
