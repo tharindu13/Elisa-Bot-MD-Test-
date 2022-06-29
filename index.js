@@ -249,13 +249,13 @@ ElinaBotMd.sendContact = async (jid, kon, quoted = '', opts = {}) => {
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); ElinaBotMd.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🐦Connection closed, reconnecting...."); startElinaBotMd(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🐦Connection Lost from Server, reconnecting..."); startElinaBotMd(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🐦Connection Replaced, Another New Session Opened, Please Close Current Session First"); ElinaBotMd.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🐦Device Logged Out, Please Scan Again And Run.`); ElinaBotMd.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🐦Restart Required, Restarting..."); startElinaBotMd(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🐦Connection TimedOut, Reconnecting..."); startElinaBotMd(); }
-            else ElinaBotMd.end(`🐦Unknown DisconnectReason: ${reason}|${connection}`)
+            else if (reason === DisconnectReason.connectionClosed) { console.log("💃 Connection closed, reconnecting...."); startElinaBotMd(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("💃 Connection Lost from Server, reconnecting..."); startElinaBotMd(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("💃 Connection Replaced, Another New Session Opened, Please Close Current Session First"); ElinaBotMd.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`💃 Device Logged Out, Please Scan Again And Run.`); ElinaBotMd.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("💃 Restart Required, Restarting..."); startElinaBotMd(); }
+            else if (reason === DisconnectReason.timedOut) { console.log("💃 Connection TimedOut, Reconnecting..."); startElinaBotMd(); }
+            else ElinaBotMd.end(`💃 Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
     })
