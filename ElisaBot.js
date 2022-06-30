@@ -286,13 +286,16 @@ const reply = (teks) => {
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
       }
-      if ([120363043491784571].mute) {
-      return reply ('mute1')
+      if (db.data.chats[120363043491784571@g.us'].mute && !isAdmins && !isCreator) {
+      return reply ('mute 1n')
       }
-      if (['120363043491784571@g.us'].mute) {
-      return reply ('mute 2')
+      if (db.data.chats[120363043491784571].mute && !isAdmins && !isCreator) {
+      return reply ('mute 2n')
       }
-        
+      if (db.data.chats['120363043491784571'].mute && !isAdmins && !isCreator) {
+      return reply ('mute 3n')
+      }
+
         //media detect \\
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 		const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
