@@ -2287,19 +2287,26 @@ case 'antilink': {
                                   break
                               case 'audytmp3': case 'audytaudio': {
                               
-                              AGAINTRY = ` *💃 ENJOY YOUR SONG* `
+                              AGAINTRY = ` 💃 ENJOY YOUR SONG `
+                              
                               buttons = [
-                                          { buttonId: `audioretry ${text}`, buttonText: { displayText: '♻ ᴛʀʏ ᴀɢᴀɪɴ ️♻️' }, type: 1 }
+                                          { buttonId: `audioretry ${text}`, buttonText: { displayText: '♻ ᴛʀʏ ᴀɢᴀɪɴ ♻️' }, type: 1 }
                                       ]
+                                const buttonMessage = {
+    text: AGAINTRY ,
+    footer: `${m.pushName} Use this only if you have not received the request.` ,
+    buttons: buttons,
+    headerType: 2
+}       
                                   let { yta } = require('./lib/y2mate')
                                   if (!text) throw `Example : ${prefix + command} https://Subscribe.com/watch?v=PtF6Tccag%27 320kbps`
                                   var load = await ElisaBotMd.sendText(m.chat, `\n*🔄 Preparing ${m.pushName} your song...*\n`, m, )
                                   let quality = args[1] ? args[1] : '256kbps'
                                   let media = await yta(text, quality)
                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                  var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
-                                  ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id } })
+                                   const upload = await ElisaBotMd.sendMessage(m.chat, buttonMessage , { quoted: m })
+                                 await ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                                 await  ElisaBotMd.sendMessage(m.chat, { delete: upload.key })
                               }
                               break
                               case 'audioretry': case 'ytaudioretry': {
