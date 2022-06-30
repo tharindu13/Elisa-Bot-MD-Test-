@@ -2299,7 +2299,7 @@ case 'antilink': {
                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
                                   var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
                                   ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
+                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id } })
                               }
                               break
                               case 'audioretry': case 'ytaudioretry': {
