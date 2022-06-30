@@ -286,6 +286,12 @@ const reply = (teks) => {
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
       }
+      if ([120363043491784571].mute) {
+      return reply ('mute1')
+      }
+      if (['120363043491784571@g.us].mute') {
+      return reply ('mute 2')
+      }
         
         //media detect \\
 		const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
