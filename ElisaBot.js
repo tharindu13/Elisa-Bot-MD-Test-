@@ -289,7 +289,7 @@ const reply = (teks) => {
       if ([120363043491784571].mute) {
       return reply ('mute1')
       }
-      if (['120363043491784571@g.us].mute') {
+      if (['120363043491784571@g.us'].mute) {
       return reply ('mute 2')
       }
         
