@@ -2297,8 +2297,9 @@ case 'antilink': {
                                   let quality = args[1] ? args[1] : '256kbps'
                                   let media = await yta(text, quality)
                                   if (media.filesize >= 150000) return reply('❗ Audio size is too big '+util.format(media))
-                                  var up = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
+                                  var upload = await ElisaBotMd.sendButtonText(m.chat, buttons, AGAINTRY, `${m.pushName} Use this only if you have not received the request.` ,m)
                                   ElisaBotMd.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                                   ElisaBotMd.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: upload.key.id, participant: m.quoted.sender } })
                               }
                               break
                               case 'audioretry': case 'ytaudioretry': {
